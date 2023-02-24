@@ -5,11 +5,10 @@ let lang = country.getAttribute('lang')
 // Defining results
 let indice;
 let dropList;
-let href = ['index.html', 'index_br.html', 'index_fr.html'];
 let langItem = {
-    en:['English', 'Portuguese', 'French', 'config/assets/en-flag.svg'],
-    pt:['Português', 'Inglês', 'Francês', 'config/assets/pt-flag.svg'],
-    fr:['François', 'Anglaise', 'Portugais', 'config/assets/fr-flag.svg']
+    en:['English', 'Portuguese', 'index_br.html', 'French', 'index_fr.html', 'config/assets/en-flag.svg'],
+    pt:['Português', 'Inglês', 'index.html', 'Francês', 'index_fr.html','config/assets/pt-flag.svg'],
+    fr:['François', 'Anglaise', 'index.html', 'Portugais', 'index_br.html', 'config/assets/fr-flag.svg']
 };
 
 // Selecting language
@@ -36,14 +35,14 @@ selectLang();
 // Adding into HTML
 let language = document.querySelector(".dropdown");
 language.innerHTML = `
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="${dropdown()[3]}" alt="${dropdown()[indice]} Flag" class="flag">
-        ${dropdown()[indice]}
+    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="${dropdown()[5]}" alt="${dropdown()[0]} Flag" class="flag">
+        ${dropdown()[0]}
     </a>
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="${href[indice+1]}">${dropdown()[1]}</a></li>
+        <li><a class="dropdown-item" href="${dropdown()[2]}">${dropdown()[1]}</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="${href[indice+2]}">${dropdown()[2]}</a></li>
+        <li><a class="dropdown-item" href="${dropdown()[4]}">${dropdown()[3]}</a></li>
     </ul>
     `
 
