@@ -1,12 +1,10 @@
 *{
     font-family: Roboto, 'sans-serif'
 }
-
 body{
     background-color: #0F172A;
     font-size: 14px;
 }
-
 header{
     border-bottom: 1px solid #d4d4d4;
 }
@@ -40,9 +38,12 @@ header{
     height: 400px;
     width: 100%;
 }
+.document{
+    margin-bottom: 120px;
+}
 
 /* PROJECTS */
-section, .figure-caption, h3{
+section, h3, .figure-caption{
     color: #d4d4d4;
 }
 h3{
@@ -66,12 +67,9 @@ h3{
 .progress {
     width: 120px;
     height: 120px !important;
-    float: left; 
-    line-height: 120px;
     background: none;
-    margin: 20px;
-    box-shadow: none;
     position: relative;
+    left: 25%;
 }
 .progress>span {
     width: 50%;
@@ -88,7 +86,7 @@ h3{
     width: 100%;
     height: 100%;
     background: none;
-    border: 12px solid #F1A005; /* a5f3fc - blue */
+    border: 10px solid #F1A005; /* a5f3fc - blue */
     position: absolute;
     top: 0;
 }
