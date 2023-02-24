@@ -37,15 +37,13 @@ selectLang();
 let language = document.querySelector(".dropdown");
 language.innerHTML = `
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="${dropdown()[3]}" alt="${langItem.en[indice]} Flag" class="flag">
-        ${langItem.en[indice]}
+        <img src="${dropdown()[3]}" alt="${dropdown()[indice]} Flag" class="flag">
+        ${dropdown()[indice]}
     </a>
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="${href[1]}">${dropdown()[1]}</a></li>
+        <li><a class="dropdown-item" href="${href[indice+1]}">${dropdown()[1]}</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="${href[2]}">${dropdown()[2]}</a></li>
+        <li><a class="dropdown-item" href="${href[indice+2]}">${dropdown()[2]}</a></li>
     </ul>
     `
-
-
 
